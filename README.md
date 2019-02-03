@@ -1,11 +1,11 @@
 # serverAvailability
-######################################################################
+####
 Draft Plan: 
 * 1. Define requirments
 * 2. clear open questions
 * 3. estimate needed time
 
-######################################################################
+####
 Goal: Monitor Application
 
 Content Requirements:
@@ -21,7 +21,7 @@ Implementation requirements
 * source code and application: .jar 
 * time tracking
 
-######################################################################
+####
 first implementation Idea:
 * Class Main (ServerList, Methode call) 
 * Class ServerDetails (name, result, constructor, Getter/Setter)
@@ -36,7 +36,7 @@ Goal: Try to make yes/no question to get clear answers
 * server list: can I use own server example list?
 * Console Output: free choice
 
-######################################################################
+####
 Aslong you wait for Email/Phone answer, research technology: 
 * InetAddress: http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_21_005.htm#mj8ba2862796503ab879fa49a1124af188
 * Socket: https://docs.oracle.com/javase/7/docs/api/java/net/Socket.html
