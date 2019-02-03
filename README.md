@@ -51,5 +51,5 @@ Usage of Breakpoints/Debugging
 ####
 Time:
 * Planning/Research time: 2h
-* Estimation for needed implementation time: 2h 
+* Estimation for needed implementation time: 3h 
 * additional Testing time: 1h 
