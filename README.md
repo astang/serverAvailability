@@ -47,3 +47,5 @@ Aslong you wait for Email/Phone answer, research technology:
 * Ping Code: http://techdive.in/java/java-ping-host-or-ip-address
 * Enum: https://www.geeksforgeeks.org/enummap-class-java-example/
 Usage of Breakpoints/Debugging
+
+(Planning time: 1-2h)
