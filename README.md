@@ -48,4 +48,8 @@ Aslong you wait for Email/Phone answer, research technology:
 * Enum: https://www.geeksforgeeks.org/enummap-class-java-example/
 Usage of Breakpoints/Debugging
 
-(Planning time: 1-2h)
+####
+Time:
+* Planning/Research time: 2h
+* Estimation for needed implementation time: 2h 
+* additional Testing time: 1h 
