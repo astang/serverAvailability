@@ -54,3 +54,28 @@ Time:
 * Conecpt and Planning/Research time: 2h
 * Estimation for needed implementation time: 3h 
 * if needed additional Testing time: 1h 
+
+#### 
+04.02.2019 
+
+Question catalogue: 
+* frequency: 
+    1.1 okay-solution: fixed value (own choice)
+    1.2 best solution: free value (user input)  
+* server check: http-check 
+* results: short message enough (“client error”, “server error”, but at least 3 checks)
+* server list: 
+    4.1 okay-solution: console input 
+    4.2 best solution: free choice (user input: read .csv || console input) 
+* Code sharing: via gitHub
+
+Time after project finished:
+* Conecpt and Planning/Research time: 2+1h
+* Estimation for needed implementation time: 3+1h 
+* if needed additional Testing time: 1h
+RESULT: I needed 2h more than planned 
+
+Reason (some of the unespected pain points): 
+* git issues 
+* for-loop issue
+* debugging research
