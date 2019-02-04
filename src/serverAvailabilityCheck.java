@@ -14,17 +14,19 @@ public class serverAvailabilityCheck {
         System.out.println("Please enter the number of server you want to check: " );
         Scanner scanner = new Scanner(System.in);
         int amountserver = scanner.nextInt();
-        System.out.println("\n" + "To are now able to add your " + amountserver + " server! ");
+        System.out.println("\n" + "Please add your server now: ");
 
-        //TODO: implement a loop without a first empty server entry
-        for(int i=0; i<=amountserver; i++){
-            System.out.print(i +". servername: ");
+        //user input: add server list manually to device arraylist
+        for(int i=0; i<=amountserver; i++) {
             String servername = scanner.nextLine();
-            devices.add(new Server(servername));
+            if(!servername.equals("")){
+                devices.add(new Server(servername));
+                System.out.println(i + " server added! ");
+            }
         }
 
         //Set the interval time
-        System.out.println("Please enter the interval time your server (list) need to be checked : " );
+        System.out.println("\n" + "Please enter the interval time your server (list) need to be checked : " );
         int userinputtime = scanner.nextInt();
         final long timeInterval = userinputtime *1000;
         System.out.println("\n" + "Your server will be checked each " + userinputtime + " seconds ");
