@@ -16,7 +16,7 @@ public class serverAvailabilityCheck {
         int option = scanner.nextInt();
         if (option == 1 ){
             //Throw Exception in Main Head method
-            System.out.println("Please enter the path of your file i.e. 'C:/serverlist.csv' ");
+            System.out.println("Enter your file path "+"\n"+"(i.e. 'C:/serverlist.csv') ");
             Scanner readfilepath = new Scanner(System.in);
             String filepath = readfilepath.nextLine();
             if (!filepath.isEmpty()) {
@@ -30,9 +30,9 @@ public class serverAvailabilityCheck {
             }
         }else if (option == 2){
             //Set the server list with manual input
-            System.out.println("Please enter the number of server you want to check: ");
+            System.out.println("Enter the number of server to check: ");
             int amountserver = scanner.nextInt();
-            System.out.println("\n" + "Please add your server now: ");
+            System.out.println("\n" + "Add your server name: ");
             //enable user input: add server list manually to device list
             for (int i = 0; i <= amountserver; i++) {
                 String servername = scanner.nextLine();
@@ -47,7 +47,7 @@ public class serverAvailabilityCheck {
 
 
         //Set the interval time
-        System.out.println("\n" + "Please enter the interval time your server (list) need to be checked : ");
+        System.out.println("\n" + "Enter time update interval: "+"\n"+"(i.e. 1 for 1 second) ");
         int userinputtime = scanner.nextInt();
         final long timeInterval = userinputtime * 1000;
         System.out.println("\n" + "Your server will be checked each " + userinputtime + " seconds ");
