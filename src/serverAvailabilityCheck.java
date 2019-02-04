@@ -1,28 +1,50 @@
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.Scanner;
-
+import java.io.*;
 /**
  * Created by alice on 04.02.2019.
  */
 public class serverAvailabilityCheck {
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner scanner = new Scanner(System.in);
         //Set the server list
         ArrayList<Server> devices = new ArrayList<>();
-        System.out.println("Please enter the number of server you want to check: ");
-        Scanner scanner = new Scanner(System.in);
-        int amountserver = scanner.nextInt();
-        System.out.println("\n" + "Please add your server now: ");
-        //enable user input: add server list manually to device list
-        for (int i = 0; i <= amountserver; i++) {
-            String servername = scanner.nextLine();
-            if (!servername.equals("")) {
-                devices.add(new Server(servername));
-                System.out.println(i + " server added! ");
+
+        System.out.println("Choose your option:"+"\n" +" 1. Read a .csv file "+ "\n" +" 2. Use manual input function");
+        int option = scanner.nextInt();
+        if (option == 1 ){
+            //Throw Exception in Main Head method
+            System.out.println("Please enter the path of your file i.e. 'C:/serverlist.csv' ");
+            Scanner readfilepath = new Scanner(System.in);
+            String filepath = readfilepath.nextLine();
+            if (!filepath.isEmpty()) {
+                Scanner scanner_readcsv = new Scanner(new File(filepath));
+                scanner_readcsv.useDelimiter(",");
+                while (scanner_readcsv.hasNext()) {
+                    String server = scanner_readcsv.next();
+                    devices.add(new Server(server));
+                }
+                scanner_readcsv.close();
             }
+        }else if (option == 2){
+            //Set the server list with manual input
+            System.out.println("Please enter the number of server you want to check: ");
+            int amountserver = scanner.nextInt();
+            System.out.println("\n" + "Please add your server now: ");
+            //enable user input: add server list manually to device list
+            for (int i = 0; i <= amountserver; i++) {
+                String servername = scanner.nextLine();
+                if (!servername.equals("")) {
+                    devices.add(new Server(servername));
+                    System.out.println(i + " server added! ");
+                }
+            }
+        }else{
+            System.out.println("Invalid option!");
         }
+
 
         //Set the interval time
         System.out.println("\n" + "Please enter the interval time your server (list) need to be checked : ");
@@ -69,10 +91,9 @@ public class serverAvailabilityCheck {
                 e.printStackTrace();
             }
         }
-
     }
 
-    //TODO: Output stucture
+    //Console Output structure
     public static void tableOutput(ArrayList<Server> devices) {
         //Output of the result per each server
         System.out.println("\n" + "--------------------------------------------------------------------------------------------------------------------------------");
