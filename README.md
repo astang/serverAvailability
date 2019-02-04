@@ -30,11 +30,12 @@ first implementation Idea:
 
 Create a question catalog to ensure to get all important informations: 
 Goal: Try to make yes/no question to get clear answers
-* frequence: How often?
+* frequency: How often?
 * server check: host, application or http?  
 * results: (if http) detailed error messages needed? 
 * server list: can I use own server example list?
 * Console Output: free choice
+* Code sharing: via git possible?
 
 ####
 Aslong you wait for Email/Phone answer, research technology: 
@@ -50,6 +51,6 @@ Usage of Breakpoints/Debugging
 
 ####
 Time:
-* Planning/Research time: 2h
-* Estimation for needed implementation time: 2h 
-* additional Testing time: 1h 
+* Conecpt and Planning/Research time: 2h
+* Estimation for needed implementation time: 3h 
+* if needed additional Testing time: 1h 
