@@ -16,7 +16,7 @@ public class serverAvailabilityCheck {
         int amountserver = scanner.nextInt();
         System.out.println("\n" + "To are now able to add your " + amountserver + " server! ");
 
-        //TODO: find a solution without first empty server
+        //TODO: implement a loop without a first empty server entry
         for(int i=0; i<=amountserver; i++){
             System.out.print(i +". servername: ");
             String servername = scanner.nextLine();
@@ -71,7 +71,7 @@ public class serverAvailabilityCheck {
 
     }
 
-    //TODO: to add server
+    //TODO: to add server with console and .csv
     public void dynamicdetails() {
 
     }
