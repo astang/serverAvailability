@@ -20,11 +20,11 @@ public class HttpResponseAvailability {
             int code = connection.getResponseCode();
             return code;
         } catch (UnknownHostException e) {
-            System.err.println( element.getServername() + " does not exist");
+           // System.err.println( element.getServername() + " does not exist");
             element.setResult("Host Exception");
             return -1;
         } catch (IOException e) {
-            System.err.println(element.getServername() + " Error in reaching Host");
+            // System.err.println(element.getServername() + " Error in reaching Host");
             element.setResult("IO Exception");
             return -2;
         }
