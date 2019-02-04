@@ -15,8 +15,7 @@ public class serverAvailabilityCheck {
         Scanner scanner = new Scanner(System.in);
         int amountserver = scanner.nextInt();
         System.out.println("\n" + "Please add your server now: ");
-
-        //user input: add server list manually to device arraylist
+        //enable user input: add server list manually to device list
         for (int i = 0; i <= amountserver; i++) {
             String servername = scanner.nextLine();
             if (!servername.equals("")) {
