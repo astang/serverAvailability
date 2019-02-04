@@ -7,28 +7,28 @@ import java.util.Scanner;
  */
 public class serverAvailabilityCheck {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         //Set the server list
         ArrayList<Server> devices = new ArrayList<>();
-        System.out.println("Please enter the number of server you want to check: " );
+        System.out.println("Please enter the number of server you want to check: ");
         Scanner scanner = new Scanner(System.in);
         int amountserver = scanner.nextInt();
         System.out.println("\n" + "Please add your server now: ");
 
         //user input: add server list manually to device arraylist
-        for(int i=0; i<=amountserver; i++) {
+        for (int i = 0; i <= amountserver; i++) {
             String servername = scanner.nextLine();
-            if(!servername.equals("")){
+            if (!servername.equals("")) {
                 devices.add(new Server(servername));
                 System.out.println(i + " server added! ");
             }
         }
 
         //Set the interval time
-        System.out.println("\n" + "Please enter the interval time your server (list) need to be checked : " );
+        System.out.println("\n" + "Please enter the interval time your server (list) need to be checked : ");
         int userinputtime = scanner.nextInt();
-        final long timeInterval = userinputtime *1000;
+        final long timeInterval = userinputtime * 1000;
         System.out.println("\n" + "Your server will be checked each " + userinputtime + " seconds ");
         int count = 0;
 
@@ -41,9 +41,9 @@ public class serverAvailabilityCheck {
         result.put(ServerStatus.UNCLEARERROR, "error");
 
         //Check each server-url
-        while (true){
+        while (true) {
             count++;
-            System.out.println("Server check number: "+ count);
+            System.out.println("Server check number: " + count);
             for (Server element : devices) {
                 int code = HttpResponseAvailability.ping(element);
                 //Set the server availability result
@@ -73,15 +73,10 @@ public class serverAvailabilityCheck {
 
     }
 
-    //TODO: to add server with console and .csv
-    public void dynamicdetails() {
-
-    }
-
     //TODO: Output stucture
     public static void tableOutput(ArrayList<Server> devices) {
         //Output of the result per each server
-        System.out.println("\n" +"--------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("\n" + "--------------------------------------------------------------------------------------------------------------------------------");
         System.out.printf("%-50s %30s", "SERVER NAME", "RESULT");
         System.out.println();
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
@@ -89,10 +84,6 @@ public class serverAvailabilityCheck {
             System.out.printf("%-50s %30s", server.getServername(), server.getResult());
             System.out.println();
         }
-        System.out.println("--------------------------------------------------------------------------------------------------------------------------------" + "\n" );
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------" + "\n");
     }
-
 }
-
-
-
