@@ -6,15 +6,9 @@ public class Server  {
     private String result;
     private int port;
 
-    // Parameterized Constructor for Host- and Http-Check
+    // Parameterized Constructor for Host-
     public Server(String servername) {
         this.servername = servername;
-    }
-
-    // Parameterized Constructor for Application-Check
-    public Server(String servername, int port) {
-        this.servername = servername;
-        this.port = port;
     }
 
     // Getter and Setter methods
